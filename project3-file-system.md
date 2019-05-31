@@ -10,17 +10,6 @@ ZhiJian Wang <11611827@mail.sustech.edu.cn>
 Mengwei Guo <11610615@mail.sustech.edu.cn>
 
 
-
-## Labor Division
-
-
-
-| Division | Task 1 Cache | Task 2 Extensible file | Task 3 Subdirectories |
-| -------- | ------------ | ---------------------- | --------------------- |
-| *Code*   | Mengwei Guo  | Zhijian Wang           | Zhijian Wang          |
-| *Report* | Mengwei Guo  | Zhijian Wang           | Both                  |
-|          |              |                        |                       |
-
 ## TASK 1 - BUFFER CACHE
 
 
@@ -259,8 +248,9 @@ No, it a directory if it is the cwd of a running process, the directory will be 
 
 How will your syscall handlers take a file descriptor, like 3, and locate the corresponding file or directory struct?
 
-
+Base on the syscall handler in the open file description table to got the the file table and find the locate of file or directory. 
 
 ### Question7
 
 You are already familiar with handling memory exhaustion in C, by checking for a NULL return value from malloc. In this project, you will also need to handle disk space exhaustion. When your file system is unable to allocate new disk blocks, you must have a strategy to abort the current operation and rollback to a previous good state.
+
