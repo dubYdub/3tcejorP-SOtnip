@@ -203,6 +203,18 @@ Synchronization is so important in this task. Cache can be viewed as the seconda
 
 The reason we introduces cache here is the same as what we have learnt from class. The cost of directly accessing the memory is very high, so we need to introduce cache to put the frequently used data and decrease the time we spending on reading and writing on data. The pintos also need this type of strategy to improve the total performance of itself. In our implementation, **cache_write** and **cache_read** can be directly used to operate on disk' s memory. The user can also use **cache_clear_all** and **cache_write_all_back** to clear the cache or write the cache back to disk. It's also a type of protection to the data in the disk.
 
+## TASK 2 - EXTENSIBLE FILES
+
+
+
+To finish this port, we have to improve the inode and change the inode_create,inode_read_at and inode_write_at. 
+
+### DATA STRUCTURES
+
+
+### ALGORITHMS & IMPLEMENTATION
+
+### SYNCHRONIZATION
 
 
 ## SURVEY QUESTIONS
