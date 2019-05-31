@@ -248,7 +248,7 @@ No, it a directory if it is the cwd of a running process, the directory will be 
 
 How will your syscall handlers take a file descriptor, like 3, and locate the corresponding file or directory struct?
 
-Base on the syscall handler in the open file description table to got the the file table and find the locate of file or directory. 
+The syscall handlers point to the file handle, and the file handle have a inode pintor, we can use it to get the locate of the file or directory. Also, we can use readline to get the original directory of the file.
 
 ### Question7
 
