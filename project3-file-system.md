@@ -246,13 +246,14 @@ Acquire the single lock that for every cache block. We have talked about it in q
 
 How will your file system take a relative path like ../my_files/notes.txt and locate the corresponding directory? Also, how will you locate absolute paths like /cs162/solutions.md?
 
+For relative path, our system will split it into directery and file, if system find .. after split, it will go to the parent directery base on currect directery. Then follow the directery order after split to find the goal file. For locate absolute paths, it mean we cannot find .. after split in the begin of the path, so we will change the path to the root and the follow the directory after split.
 
 
 ### Question5
 
 Will a user process be allowed to delete a directory if it is the cwd of a running process? The test suite will accept both “yes” and “no”, but in either case, you must make sure that new files cannot be created in deleted directories.
 
-
+No, it a directory if it is the cwd of a running process, the directory will be lock, so it cannot be delete. If the directory is been deleted, althouth we have to use time to delete it in the memory, but we can set the is_remove of the directory to be true, and then user cannot go to these directory or create file in these. 
 
 ### Question6
 
