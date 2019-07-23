@@ -28,6 +28,7 @@ var setup = function(){
     document.getElementById("GLCanvas").height=cheight.substr(0,cheight.length - 2);
     document.write("<div class='LoadingSpinnerAnimation' id='LoadingSpinner'></div>");
     document.write("<p class='LoadingDotsAnimation' id='LoadingDots'>Loading<span>.</span><span>.</span><span>.</span></p>");
+    document.write("<div id='LoadingScreenProgress'><div id='LoadingScreenBar'>0%</div></div>");
 };
 
 /**
